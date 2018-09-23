@@ -2,6 +2,9 @@
 
 from pysnmp.hlapi import *
 
+# This is functionally equivalent to
+# snmpwalk -v3 -l auth -u USERNAME -a SHA -A AUTHPASS -x AES -X PRIVPASS TARGET OSPF-MIB::ospfLsdbAdvertisement -m +SNMP-MIB
+
 username = input("Username: ")
 authpass = input("Auth pass (SHA-1): ")
 privpass = input("Priv pass (AES256): ")
