@@ -31,7 +31,7 @@ def render():
         return str(e)
 
 
-@app.route('/ospfDigraph')
+@app.route('/ospfDigraph.js')
 def snmp_poll():
     username = "thebletch"
     authpass = "AUTHPASS"
@@ -128,7 +128,7 @@ def snmp_poll():
                                 link_state_id, attached_router)
 
     g += "}"
-    return "var ospfDigraph = `" + g + "`;\n"
+    return "function ospfDigraph() {\n  return `" + g + "`;\n}\n"
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=80)
