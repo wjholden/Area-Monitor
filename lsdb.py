@@ -5,7 +5,7 @@ import struct
 import ipaddress
 
 # This is functionally equivalent to
-# snmpwalk -v3 -l auth -u USERNAME -a SHA -A AUTHPASS -x AES -X PRIVPASS TARGET OSPF-MIB::ospfLsdbAdvertisement -m +SNMP-MIB
+# snmpwalk -v3 -l auth -u USERNAME -a SHA -A AUTHPASS -x AES -X PRIVPASS TARGET OSPF-MIB::ospfLsdbAdvertisement -m +OSPF-MIB
 
 username = "thebletch"
 authpass = "AUTHPASS"
